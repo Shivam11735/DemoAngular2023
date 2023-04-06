@@ -1,0 +1,7 @@
+.row{
+    height: 55px;
+    width: 350px;
+    background-color:rgb(240, 172, 127);
+    border: solid red;
+    padding: 10px;
+}
