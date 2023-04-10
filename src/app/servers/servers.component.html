@@ -1,10 +1,31 @@
-<app-server></app-server>
+
+<p></p>
+<label>User Name</label>
+<input type="text" class="form-control" [(ngModel)] = "userName" (input)="onUpdateUserName($event)">
+<p>{{userName}}</p>
 <label>Server Name</label>
-<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
+<input type="text" class="form-control" [(ngModel)] = "serverName" (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
 <p></p>
     <div class="container">
         <div class="row">
-            <button class="btn btn-success" [disabled]="!allowNewServer" (click)="onServerCreated()">Add Server.</button>
-            <p>{{serverCreationStatus}}</p>
+            <button class="btn btn-success" [disabled]="userName.length==0 && serverName.length==0" (click)="onServerCreated()">
+                Add Server.
+            </button>
+            <!--<p>{{serverCreationStatus}}</p>-->
+            <p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}</p>
+            <ng-template #noServer>
+                <p>Server Offline.</p>
+            </ng-template>
         </div>
+        <div class="row">
+            <button class="btn btn-primary" [disabled]="userName.length==0 && serverName.length==0" (click)="resetPage()">
+                Reset Page.
+            </button>
+        </div>
+       
     </div>
+    <p></p>
+    <app-server *ngFor="let item of servers"></app-server>
+    

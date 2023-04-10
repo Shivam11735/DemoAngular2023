@@ -1,0 +1,15 @@
+.online{
+    background-color: rgb(125, 239, 63);
+    border: solid rgb(58, 212, 58);
+    padding: 10px;
+    height: 55px;
+    width: 350px;
+}
+
+.offline{
+    background-color: rgb(239, 113, 63);
+    border: solid red;
+    padding: 10px;
+    height: 55px;
+    width: 350px;
+}

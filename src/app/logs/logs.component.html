@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <p>
+            This is inside the Logs Component.
+        </p>
+        <p>
+            <button class="btn btn-primary" (click)="OnCreateLogs()">
+                Display Logs.
+            </button>
+        </p>
+        <div class="row"  *ngIf="logs">
+            <p *ngFor="let item of logs" [ngClass]="getClass()">
+                {{logs}}
+            </p>
+        </div>
+    </div>
+</div>

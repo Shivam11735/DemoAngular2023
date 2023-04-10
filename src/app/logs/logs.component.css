@@ -1,0 +1,15 @@
+.serverOver{
+    height: auto;
+    width: 1350px;
+    background-color:rgb(172, 240, 127);
+    border: solid rgb(48, 219, 29);
+    padding: 10px;
+}
+
+.serverLess{
+    height: 55px;
+    width: 1350px;
+    padding: 10px;
+}
+
+
