@@ -9,7 +9,7 @@
             </button>
         </p>
         <div class="row"  *ngIf="logs">
-            <p *ngFor="let item of logs" [ngClass]="getClass()">
+            <p *ngFor="let item of logs; let i = index" [ngClass]="getClass()">
                 {{logs}}
             </p>
         </div>
